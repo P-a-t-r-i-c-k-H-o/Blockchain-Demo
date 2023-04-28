@@ -45,7 +45,7 @@ def dataTransfer(conn):
    print(data)
    # Split the data such that you separate the command
    # from the rest of the data.
-dataMessage = data.split(' ', 1)
+   dataMessage = data.split(' ', 1)
    command = dataMessage[0]
    name = dataMessage[1]
    print(command)
