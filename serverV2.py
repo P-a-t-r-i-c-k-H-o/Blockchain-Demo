@@ -7,9 +7,9 @@ blockchain = Blockchain()
 host = ''
 port = 2034
 
-t1 = blockchain.new_data("Tommy Siuuuuuu", "Tommy Scherphorn")
+t1 = blockchain.new_data("Tommy Siuuuuuu", "Tommy Scher")
 t2 = blockchain.new_data("JP", "Andre")
-t3 = blockchain.new_data("Dr. Bayntun", "Patrick")
+t3 = blockchain.new_data("Dr. B", "Patrick")
 blockchain.add_block(12)
 store_value = str(blockchain.chain)
 
