@@ -24,7 +24,7 @@ def setupServer():
    return s
 
 def setupConnection():
-   s.listen(1)  # Allows one connection at a time.
+   s.listen(1) 
    conn, address = s.accept()
    print("Connected to: " + address[0] + ":" + str(address[1]))
    return conn
@@ -37,14 +37,10 @@ def get(input, input2):
    return reply
 
 def dataTransfer(conn):
-   # A big loop that sends/receives data until told not to.
-
-   # Receive the data
    data = conn.recv(1024)  # receive the data
    data = data.decode('utf-8')
    print(data)
-   # Split the data such that you separate the command
-   # from the rest of the data.
+
    dataMessage = data.split(' ', 1)
    command = dataMessage[0]
    name = dataMessage[1]
@@ -57,7 +53,6 @@ def dataTransfer(conn):
    conn.sendall(str.encode(reply))
    print("Data has been sent!")
    conn.close()
-
 
 s = setupServer()
 
